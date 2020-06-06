@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
+const axios = require('axios');
 
-app.get('/', (req, res) => {
-  res.send({ hi: 'there' });
+app.get('/api/search', async (req, res) => {
+  const response = await axios.get('https://cocktail-f.com/api/v1/cocktails');
+  res.send(response.data);
 });
 
 // 本番環境では、ビルドしたReactを読み込むようにする
