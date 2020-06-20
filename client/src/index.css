@@ -11,3 +11,85 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.tag {
+  font-size: 15px;
+}
+/* tag CSS */
+.tag-detail-base {
+  border-bottom: solid yellowgreen 1px;
+  font-size: 12px;
+}
+.tag-detail-ALC {
+  border-bottom: solid red 1px;
+  font-size: small;
+}
+.tag-detail-taste {
+  border-bottom: solid rebeccapurple 1px;
+  font-size: small;
+}
+.tag-detail-style {
+  border-bottom: solid blue 1px;
+  font-size: small;
+}
+.tag-detail-top {
+  border-bottom: solid aqua 1px;
+  font-size: small;
+}
+.tag-detail-tec {
+  border-bottom: solid green 1px;
+  font-size: small;
+}
+.tag-detail-glass {
+  border-bottom: solid 1px hotpink;
+  font-size: small;
+}
+
+.recip_ingredient-name {
+  font-size: x-large;
+}
+
+.modal .modal-dialog {
+  min-width: 90%;
+  max-width: 90%;
+  width: 150%;
+}
+.modal-title {
+  font-size: 29px;
+}
+
+.search-Category {
+  color: #d4d7ee;
+}
+#root {
+  background-color: #3f446b;
+}
+#bottom {
+  background-color: rgb(30, 30, 32);
+  height: 100px;
+}
+
+#button {
+  background-color: rgb(189, 186, 27);
+}
+.icon {
+  color: rgb(30, 30, 32);
+}
+
+#cocktail {
+  margin-right: px;
+  background-color: rgb(30, 30, 32);
+  color: #d4d7ee;
+  border: solid #d4d7ee 1px;
+}
+#cocktail :hover {
+  color: white;
+  cursor: pointer;
+}
+.modal-body-cocktail {
+  background-color: rgb(30, 30, 32);
+}
+img {
+  width: 100%;
+  height: auto;
+}

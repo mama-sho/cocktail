@@ -1,20 +1,46 @@
-import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import React from 'react'
+import { Col } from 'react-bootstrap'
 
-function List({ cocktails }) {
+function List({ cocktails, onClickDetail }) {
   return cocktails.map((cocktail, key) => {
     return (
-      <Row key={key} className="mb-5">
-        <Col xs={12}>
+      <Col
+        id="cocktail"
+        xs={12}
+        md={6}
+        lg={6}
+        xl={4}
+        className="mb-2"
+        key={key}
+      >
+        <a herf="#" onClick={() => onClickDetail(cocktail.cocktail_id)}>
           <h4>{cocktail.cocktail_name}</h4>
-          <div>詳細</div>
-        </Col>
-      </Row>
-    );
-  });
+          <div>
+            <span className="mr-2">
+              <span className="tag">BASE.</span>
+              <span className="tag-detail-base">{cocktail.base_name}</span>
+            </span>
+            <span className="mr-2">
+              <span className="tag">ALC.</span>
+              <span className="tag-detail-ALC">{cocktail.alcohol}%</span>
+            </span>
+            <span className="mr-2">
+              <span className="tag">TASTE.</span>
+              <span className="tag-detail-taste">{cocktail.taste_name}</span>
+            </span>
+            <span className="mr-2">
+              <span className="tag">STYLE.</span>
+              <span className="tag-detail-style">{cocktail.style_name}</span>
+            </span>
+            <span className="mr-2">
+              <span className="tag">TOP.</span>
+              <span className="tag-detail-top">{cocktail.top_name}</span>
+            </span>
+          </div>
+        </a>
+      </Col>
+    )
+  })
 }
 
-export default List;
-
-
-
+export default List
