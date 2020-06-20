@@ -236,6 +236,7 @@ class App extends React.Component {
             <Row>
               <Col xs="12" lg={6}>
                 <div className="text-center">
+                  <a href={this.state.imageLink}>{this.state.imageLink}</a>
                   <img src={this.state.imageLink}></img>
                 </div>
               </Col>
