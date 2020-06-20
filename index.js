@@ -1,18 +1,8 @@
 const express = require('express')
 const app = express()
 const axios = require('axios')
-
-// 本番環境では、ビルドしたReactを読み込むようにする
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'))
-
-  const path = require('path')
-  app.get('*', (req, res) => {
-    res.sendFile(path.resoleve(__dirname, 'client', 'build', 'index.html'))
-  })
-}
-
 require('dotenv').config()
+
 // key のチェック
 const searchKey = process.env.GOOGLE_CUSTOMSEARCH_KEY
 const engineID = process.env.SEARCHENGINE_ID
@@ -74,6 +64,13 @@ app.get('/api/imagesearch', async (req, res) => {
     },
   )
   res.send(response.data.items)
+})
+
+app.use(express.static('client/build'))
+
+const path = require('path')
+app.get('*', (req, res) => {
+  res.sendFile(path.resoleve(__dirname, 'client', 'build', 'index.html'))
 })
 
 const PORT = process.env.PORT || 5000
